@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            /* background-image: linear-gradient(#000, #fff); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="res"></h2>
+        <!-- <button>Click</button> -->
+    </div>
+
+    <script>
+        function changebg(){
+
+            const hex = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
+
+            var rand1 = Math.floor(Math.random()*hex.length);
+            var rand2 = Math.floor(Math.random()*hex.length);
+            var rand3 = Math.floor(Math.random()*hex.length);
+            var rand4 = Math.floor(Math.random()*hex.length);
+            var rand5 = Math.floor(Math.random()*hex.length);
+            var rand6 = Math.floor(Math.random()*hex.length);
+
+            var hexcolor = '#'+hex[rand1]+hex[rand2]+hex[rand3]+hex[rand4]+hex[rand5]+hex[rand6];
+            document.querySelector('body').style.backgroundColor = hexcolor;
+            document.getElementById('res').innerHTML= hexcolor;
+            // document.body.style.backgroundColor = 'rgba(255,0,0,0.5)';
+
+        }
+
+        setInterval(changebg, 3000);
+        // document.querySelector("button").addEventListener("click", changebg)
+        // changebg();
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+		body{
+			background-color: #272727;
+		}
+		.login-box{
+			width: 320px;
+			height: 400px;
+			background-color: #1f1f1f;
+			border-radius: 10px;
+			margin: 0 auto;
+			padding-top: 20px;
+			opacity: 0.8;
+			transition:box-shadow 0.5s;
+			z-index:999;
+			position: relative;
+		}
+		.login-box h1{
+			margin: 0;
+			font-size: 28px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+		.login-box .user-box, .login-box .pass-box{
+			width: 100%;
+			padding: 10px 0;
+			position: relative;
+			margin-bottom: 20px;
+		}
+		.login-box .user-box input, .login-box .pass-box input{
+			width: 100%;
+			padding: 10px 0;
+			position: relative;
+			margin-bottom: 20px;
+			border: none;
+			background-color: transparent;
+			border-bottom: 1px solid #d9d9d9;
+			outline: none;
+			transition: border 0.5s;
+		}
+		.login-box .user-box label, .login-box .pass-box label{
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 10px 0;
+			font-size: 16px;
+			color: #d9d9d9;
+			transition: all 0.5s;
+		}
+		.login-box input[type="submit"]{
+			border: none;
+			outline: none;
+			height: 40px;
+			background-color: #f9f9f9;
+			color: #212121;
+			font-size: 18px;
+			border-radius: 20px;
+			width: 100%;
+			cursor: pointer;
+			transition: background-color 0.5s;
+			margin-top: 20px;
+		}
+		.login-box input[type="submit"]:hover{
+			background-color: #f2f2f2;
+		}
+		.login-box .login-link{
+			float: right;
+			margin-top: 20px;
+			cursor: pointer;
+			transition: color 0.5s;
+			color: #d9d9d9;
+		}
+		.login-box .login-link:hover{
+			color: #f9f9f9;
+		}
+		.login-box:hover{
+			box-shadow: 0 0 10px #d9d9d9;
+		}
+	</style>
+</head>
+<body>
+
+	<h2 style="color:white">My name is {{my}} and my husband is {{dear}}</h2>
+	<div class="login-box">
+		<h1>Login</h1>
+		<form action="" method="post">
+			<div class="user-box">
+				<input type="text" name="username" required="">
+				<label>Username</label>
+			</div>
+			<div class="pass-box">
+				<input type="password" name="password" required="">
+				<label>Password</label>
+			</div>
+			<input type="submit" name="login" value="Login">
+			<a href="#" class="login-link">Forgot Password?</a>
+		</form>
+	</div>
+</body>
+</html>
